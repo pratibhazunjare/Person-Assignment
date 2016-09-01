@@ -8,6 +8,7 @@
     "node-rest-client": "^2.0.1",
     "react": "0.13.3",
     "react-bootstrap": "0.25.2",
+    "react-dom": "^15.3.1",
     "react-redux": "^3.0.1",
     "react-router": "^2.7.0",
     "react-widgets": "2.8.1",
