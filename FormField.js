@@ -3,12 +3,7 @@ var Col = require('react-bootstrap/lib/Col')
 var React = require('react')
 var Row = require('react-bootstrap/lib/Row')
 var {PropTypes} = React
-
-
-var Loading = require('./Loading')
-
 var FIELD_EVENT_HANDLER = /^(?:on|handle)[A-Z]/
-
 
 function shouldFormFieldUpdate(nextProps) {
   var keys = Object.keys(this.props)
@@ -28,12 +23,10 @@ var FormField = React.createClass({
     shouldFormFieldUpdate
   },
   propTypes: {
-
     field: PropTypes.object,
     inputClass: PropTypes.string,
     inputProps: PropTypes.object,
     label: PropTypes.string,
-    loading: PropTypes.bool
   },
   getDefaultProps() {
     return {
@@ -42,12 +35,12 @@ var FormField = React.createClass({
     }
   },
   render() {
-    var {field, help, inputClass, inputProps, label, loading} = this.props
+    var {field, help, inputClass, inputProps, label} = this.props
     var error = field.touched && field.error
     return <Col sm={6}>
       <Row className={classNames('form-group', {'has-error': error})}>
         <Col sm={4} className="control-label">
-          {loading && <Loading inline/>} <label htmlFor={inputProps.id}>{label}</label>
+         <label htmlFor={inputProps.id}>{label}</label>
 
         </Col>
         <Col sm={8} className={inputClass}>

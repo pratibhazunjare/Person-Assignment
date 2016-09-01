@@ -15,6 +15,7 @@ var store = configureStore()
 	 shouldComponentUpdate: function(nextProps, nextState) {
   return true;
 },
+
  	getInitialState() {
     return {
       save: false,
