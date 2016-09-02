@@ -3,7 +3,6 @@ var Col = require('react-bootstrap/lib/Col')
 var React = require('react')
 var Row = require('react-bootstrap/lib/Row')
 var {PropTypes} = React
-var FIELD_EVENT_HANDLER = /^(?:on|handle)[A-Z]/
 
 function shouldFormFieldUpdate(nextProps) {
   var keys = Object.keys(this.props)
