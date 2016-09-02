@@ -34,7 +34,7 @@ var FormField = React.createClass({
     }
   },
   render() {
-    var {field, help, inputClass, inputProps, label} = this.props
+    var {field,  inputClass, inputProps, label} = this.props
     var error = field.touched && field.error
     return <Col sm={6}>
       <Row className={classNames('form-group', {'has-error': error})}>
