@@ -6,9 +6,7 @@ var configureStore = require('./configureStore')
  var { Router, Route,hashHistory, IndexRoute, Link } =require( 'react-router')
 var render =require('react-dom')
 
-  
 var store = configureStore()
-
 
  var App = React.createClass({
 	 shouldComponentUpdate: function(nextProps, nextState) {
@@ -30,28 +28,25 @@ var store = configureStore()
 			
     },
    render: function() {
-   					var self=this
-   				    var {save, search1} = this.state
+   			var self=this
+   			var {save, search1} = this.state
    	
-        return (
+			 return (
 			<div>
 			<h1>Person Information</h1><br/><br/>
-          <div id="buttons">
-            <button id="SavePerson" onClick={self.switch.bind(null,"save")}>Save</button><br/><br/>
-            <button id="SearchPerson" onClick={self.switch.bind(null,"search") }>Search</button>
-			  </div>
+          		<div id="buttons">
+            		<button id="SavePerson" onClick={self.switch.bind(null,"save")}>Save</button><br/><br/>
+            		<button id="SearchPerson" onClick={self.switch.bind(null,"search") }>Search</button>
+			 </div>
             
-					{this.state.save?<AddPerson/> : null}
-					{this.state.search1?<SearchPerson/>:null}
-          
-          </div>
-        )
-      }
+				{this.state.save?<AddPerson/> : null}
+				{this.state.search1?<SearchPerson/>:null}
+	                 </div>
+			)
+		     }
     });
 
 
-React.render(<Provider store={store}>{() =>								
-						<App/>	
-								}</Provider>, document.querySelector('#app'))
+React.render(<Provider store={store}>{() => <App/>}</Provider>, document.querySelector('#app'))
 
 
