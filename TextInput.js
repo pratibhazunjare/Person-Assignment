@@ -9,8 +9,8 @@ var TextInput = React.createClass({
   },
   shouldComponentUpdate: FormField.shouldFormFieldUpdate,
   render() {
-    var {field, help, label, onChange, ...inputProps} = this.props
-    return <FormField field={field} help={help} inputProps={inputProps} label={label}>
+    var {field,  label, onChange, ...inputProps} = this.props
+    return <FormField field={field}  inputProps={inputProps} label={label}>
       <input
         {...inputProps}
         className="form-control"
