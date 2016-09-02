@@ -3,7 +3,6 @@ var {Provider} = require('react-redux')
 var AddPerson = require('./AddPerson')
 var SearchPerson = require('./searchPerson')
 var configureStore = require('./configureStore')
- var destination = document.querySelector("#container");
  var { Router, Route,hashHistory, IndexRoute, Link } =require( 'react-router')
 var render =require('react-dom')
 
